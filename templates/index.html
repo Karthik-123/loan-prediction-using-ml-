@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #0093E9, #80D0C7);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #555;
+            font-size: 14px;
+            text-align: left;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .hint {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="Gender">Gender:</label>
+            <div class="hint">0: Female, 1: Male</div>
+            <input type="number" id="Gender" name="Gender" required>
+            
+            <label for="Married">Marital Status:</label>
+            <div class="hint">0: No, 1: Yes</div>
+            <input type="number" id="Married" name="Married" required>
+            
+            <label for="Dependents">Dependents:</label>
+            <div class="hint">0, 1, 2, or 4 (for 3+)</div>
+            <input type="number" id="Dependents" name="Dependents" required>
+            
+            <label for="Education">Education:</label>
+            <div class="hint">0: Not Graduate, 1: Graduate</div>
+            <input type="number" id="Education" name="Education" required>
+            
+            <label for="Self_Employed">Self Employed:</label>
+            <div class="hint">0: No, 1: Yes</div>
+            <input type="number" id="Self_Employed" name="Self_Employed" required>
+            
+            <label for="ApplicantIncome">Applicant Income:</label>
+            <input type="number" id="ApplicantIncome" name="ApplicantIncome" required>
+            
+            <label for="CoapplicantIncome">Coapplicant Income:</label>
+            <input type="number" id="CoapplicantIncome" name="CoapplicantIncome" required>
+            
+            <label for="LoanAmount">Loan Amount:</label>
+            <input type="number" id="LoanAmount" name="LoanAmount" required>
+            
+            <label for="Loan_Amount_Term">Loan Amount Term:</label>
+            <input type="number" id="Loan_Amount_Term" name="Loan_Amount_Term" required>
+            
+            <label for="Credit_History">Credit History:</label>
+            <div class="hint">0: No, 1: Yes</div>
+            <input type="number" id="Credit_History" name="Credit_History" required>
+            
+            <label for="Property_Area">Property Area:</label>
+            <div class="hint">0: Rural, 1: Semiurban, 2: Urban</div>
+            <input type="number" id="Property_Area" name="Property_Area" required>
+            
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
